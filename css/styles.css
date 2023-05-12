@@ -890,6 +890,12 @@ footer div.footer2 {
     
 }
 
+@media screen and (max-width: 650px) {
+    .cont_p_cont article div img {
+        height: 20px;
+    }
+}
+
 @media screen and (max-width: 632px) {
     main section.contact {
         flex-direction: column;
@@ -1013,9 +1019,6 @@ footer div.footer2 {
             flex-direction: column;
             align-items: center;
         }
-            .cont_p_cont article div img {
-                height: 20px;
-            }
             .cont_p_cont article div h2 {
                 font-size: 15px;
                 text-align: center;
@@ -1079,6 +1082,12 @@ footer div.footer2 {
         width: 45%;
     }
 
+}
+
+@media screen and (max-width: 430px) {
+    .cont_p_cont article div img {
+        height: 18px;
+    }
 }
 
 @media screen and (max-width: 360px) {
