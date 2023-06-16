@@ -736,7 +736,7 @@ footer div.footer2 {
                 order: 1;
                 display: none;
                 animation: scale-up-left 0.8s;
-                padding: 0%;
+                padding: 0% !important;
                 margin-top: 5%;
             }
             footer div.footer2 div ul li a:hover ~ span,
