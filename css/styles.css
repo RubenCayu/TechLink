@@ -746,7 +746,7 @@ footer div.footer2 {
             }
 
 
-/* 1358px(1375px) / 1075px / 632px     resoluciones en las que algo empieza a fallar ------------------------------------- */
+/* Correcciones a resoluciones en las que algo empieza a fallar --------------------------------------- */
 
 /* Resoluciones 768px y 992px */
 @media screen and (max-width: 1400px) {
@@ -921,7 +921,7 @@ footer div.footer2 {
     }
 }
 
-@media screen and (max-width: 632px) {
+@media screen and (max-width: 740px) {
     main section.contact {
         flex-direction: column;
     }
