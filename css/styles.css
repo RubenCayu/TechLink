@@ -676,7 +676,7 @@ footer div.footer1 {
         }
         footer div.footer1 div img:hover {
             width: 45px;
-            padding: 0px 2.5px;
+            padding: 5px;
         }
             footer div.footer1 div a {
                 color: #FFFFFF;
@@ -886,6 +886,10 @@ footer div.footer2 {
         footer div.footer1 div a.f2 {
             font-size: 18px;
         }
+        footer div.footer1 div a.f2:hover {
+            font-size: 19px;
+            margin-left: 20px;
+        }
         footer div.footer1 div img {
             margin-top: 10px;
         }
@@ -941,8 +945,15 @@ footer div.footer2 {
         footer div.footer1 div img {
             width: 40px;
         }
-        footer div.footer1 div a.f2 {
-            padding-bottom: 3%;
+        footer div.footer1 div img:hover {
+            padding: 3px;
+        }
+        /*footer div.footer1 div a.f2 {
+            padding-bottom: 3%; 
+        }*/
+        footer div.footer1 div a.f2:hover {
+            font-size: 18.3px;
+            margin-left: 19px;
         }
     footer div.footer2 {
         padding: 50px 0px 60px 0px;
@@ -956,6 +967,13 @@ footer div.footer2 {
                 footer div.footer2 div ul {
                     padding-left: 5px;
                 }
+    footer div.footer2 div ul li a:hover {
+        text-decoration: underline;
+    }
+        footer div.footer2 div ul li a:hover ~ span,
+        footer div.footer2 div ul li a ~ span:hover {
+            display: none;
+        }
 }
 
 @media screen and (max-width: 560px) {
@@ -1113,6 +1131,22 @@ footer div.footer2 {
         width: 45%;
     }
 
+}
+
+@media screen and (max-width: 500px) {
+    footer div.footer1 {
+        flex-direction: column;
+    }
+    footer div.footer1 div.a-links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        footer div.footer1 div.a-links img {
+            margin: 0%;
+            margin-right: 0%;
+            width: 35px;
+        }
 }
 
 @media screen and (max-width: 485px) {
