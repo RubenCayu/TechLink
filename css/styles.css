@@ -609,7 +609,7 @@ section.contacto {
                     margin: 0px;
                 }
                 .datos_cont h2.h2_2:nth-child(3) {
-                    font-size: 19px;
+                    font-size: 17px;
                     text-decoration: underline;
                 }
                 .datos_cont h2:nth-child(1),
@@ -954,15 +954,15 @@ footer div.footer2 {
         footer div.footer1 div img:hover {
             padding: 3px;
         }
-        /*footer div.footer1 div a.f2 {
+        footer div.footer1 div a.f2 {
             padding-bottom: 3%; 
-        }*/
+        }
         footer div.footer1 div a.f2:hover {
             font-size: 18.3px;
             margin-left: 19px;
         }
     footer div.footer2 {
-        padding: 50px 0px 60px 0px;
+        padding: 12% 0px 5% 0px;
     }
         footer div.footer2 div {
             width: auto;
@@ -999,6 +999,8 @@ footer div.footer2 {
         }
             header div.logo img {
                 width: 300px;
+                margin-top: 0.5vh;
+                margin-left: -5%;
             }
                 .menu nav ul.menu1 {
                     display: none;
@@ -1036,7 +1038,7 @@ footer div.footer2 {
                     .menu2-container .hamburger-lines {
                         display: block;
                         height: 23px;
-                        width: 35px;
+                        width: 30px;
                         position: absolute;
                         top: 2.5vh;
                         left: 20px;
@@ -1073,6 +1075,7 @@ footer div.footer2 {
                         display: flex;
                         flex-direction: column;
                         margin-left: 10%;
+                        margin-top: -1vh;
                         padding-left: 30%;
                         transition: transform 0.5s ease-in-out;
                         box-shadow: 5px 0px 10px 0px #aaa;
@@ -1086,13 +1089,13 @@ footer div.footer2 {
                     transform: translateX(0);
                 }
                     .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-                        transform: rotate(35deg);
+                        transform: rotate(40deg);
                     }
                     .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
                         transform: scaleY(0);
                     }
                     .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-                        transform: rotate(-35deg);
+                        transform: rotate(-40deg);
                     }
 }
 
@@ -1176,16 +1179,22 @@ footer div.footer2 {
     footer div.footer1 {
         flex-direction: column;
     }
-    footer div.footer1 div.a-links {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-        footer div.footer1 div.a-links img {
-            margin: 0%;
-            margin-right: 0%;
-            width: 35px;
+        footer div.footer1 div a.f2 {
+            padding-bottom: 0%; 
         }
+        footer div.footer1 div.a-links {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+            footer div.footer1 div.a-links img {
+                margin: 0%;
+                margin-right: 0%;
+                width: 35px;
+            }
+    footer div.footer2 {
+        padding: 16% 0px 7% 0px;
+    }
 }
 
 @media screen and (max-width: 485px) {
@@ -1196,6 +1205,37 @@ footer div.footer2 {
         margin-left: 20%;
     }
     
+    section.cont_p {
+        margin: auto 3%;
+    }
+        .cont_p div.fondo_cont_p {
+            background-position: 2.5% 100%;
+        }
+        .cont_p_cont,
+        #cloudIT .cont_p_cont {
+            grid-template-columns: auto;
+            margin-left: 6%;
+        }
+            .cont_p_cont article {
+                margin-right: 1%;
+            }
+                .cont_p_cont article div {
+                    align-items: flex-start;
+                }
+                    .cont_p_cont article div img {
+                        height: 25px;
+                    }
+                    .cont_p_cont article div h2{
+                        font-size: 25px;
+                    }
+                    .cont_p_cont article div p {
+                        text-align: left;
+                        font-size: 13px;
+                        margin: 2% 0%;
+                    }
+                    .cont_p_cont article div a {
+                        font-size: 18px;
+                    }
 }
 
 @media screen and (max-width: 430px) {
@@ -1208,9 +1248,10 @@ footer div.footer2 {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
     header div.logo img {
         margin-top: 2%;
+        margin-left: -2%;
         width: 270px;
     }
 
@@ -1227,6 +1268,16 @@ footer div.footer2 {
 
 @media screen and (max-width: 310px) {
     header div.logo img {
-        font-size: 80%;
+        width: 230px;
     }
+    .menu2-container .hamburger-lines {
+        height: 20px;
+        width: 25px;
+    }
+        .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+        .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
 }
