@@ -5,9 +5,11 @@
 @keyframes shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow: 0px 12px 30px 5px #243b5e33}}
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .material-symbols-outlined {
@@ -217,6 +219,10 @@ header {
         z-index: 5;
         padding: 1rem;
     }
+        nav div.menu2 {
+            display: none;
+        }
+/* 
         nav div.menu_desplegable {
             display: none;
             position: relative;
@@ -245,7 +251,7 @@ header {
                     }
         .menu_desplegable_lista .desplegable_menu_a img {
             width: 100%;
-        }
+        } */
                  
     
     /* Main ------------------------------------- */
@@ -978,83 +984,116 @@ footer div.footer2 {
 
 @media screen and (max-width: 560px) {
     header {
-        justify-content: space-around;
+        justify-content: flex-end;
         flex-wrap: nowrap;
         padding-bottom: 2%;
-        padding-top: 3%;
+        padding-top: 0%;
     }
-        header div.logo img {
-            width: 300px;
+        header div.logo {
+            display: flex;
+            margin: auto;
+            margin-right: 0px;
+            margin-top: 1.5vh;
+            order: 2;
+            align-content: center;
         }
-            .menu nav ul.menu1 {
-                display: none;
+            header div.logo img {
+                width: 300px;
             }
-            .menu nav div.menu_desplegable {
-                display: block;
-            }
+                .menu nav ul.menu1 {
+                    display: none;
+                }
+                .menu nav div.menu_desplegable {
+                    display: block;
+                }
         .menu nav ul {
             flex-wrap: wrap;
         }
     
-        /* Header 2 */
-        .desplegable_menu_a {
-            width: 35px;
-            display: flex;
-            opacity: 1;
-            justify-content: flex-end;
+        /* Desplegable de hamburguesa */
+        nav div.menu2 {
+            display: block;
+            opacity: 0.95;
+            order: 1;
         }
-        .menu_desplegable_lista_ul {
-            opacity: 0;
-            position: fixed;
-            visibility: none;
-            top: -1000px;
-            /* ---- */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #25310c;
-            box-shadow: 0 0 30px #00000030;
-            border: 2px solid #ffffff33;
-            border-radius: 2rem 0 2rem 2rem;
-            background: #ffffff;
-        }
-        .menu_desplegable_lista:focus .menu_desplegable_lista_ul,
-        .menu_desplegable_lista:focus-within .menu_desplegable_lista_ul {
-            position: absolute;
-            visibility: visible;
-            opacity: 1;
-            top: 2rem;
-            right: 1.5rem;
-        }
-        /* Si el navegador lo soporta aplica un fondo de blur */
-        @supports (backdrop-filter: blur(10px)) {
-            .menu_desplegable_lista:focus .menu_desplegable_lista_ul,
-            .menu_desplegable_lista:focus-within .menu_desplegable_lista_ul {
-                background: #ffffffb3;
-                backdrop-filter: blur(10px);
+            .menu2-container {
+                height: 6vh;
             }
-        }
-            .menu_desplegable {
-                margin-right: 0;
-                padding: 0px 1.5rem 0px 0px;
-            }
-                .menu_a:hover,
-                .menu_a:focus {
-                    opacity: 0.8;
-                    color: #121212;
+                .menu2-container input[type="checkbox"],
+                .menu2-container .hamburger-lines {
+                    display: block;
                 }
-        .menu_desplegable_lista:focus ,
-        .menu_desplegable_lista:focus-within .desplegable_menu_a {
-            opacity: 0.5;
-            z-index: -1;
-        }
-        
-        div.formulario form div#enviar {
-            margin-right: 0%;
-            width: auto;
-        }
-
+                .menu2-container input[type="checkbox"] {
+                    position: absolute;
+                    display: block;
+                    height: 32px;
+                    width: 30px;
+                    top: 2vh;
+                    left: 23px;
+                    z-index: 5;
+                    opacity: 0;
+                }
+                    .menu2-container .hamburger-lines {
+                        display: block;
+                        height: 23px;
+                        width: 35px;
+                        position: absolute;
+                        top: 2.5vh;
+                        left: 20px;
+                        z-index: 2;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                        .menu2-container .hamburger-lines .line {
+                            display: block;
+                            height: 4px;
+                            width: 100%;
+                            border-radius: 10px;
+                            background: #333;
+                        }
+                            .menu2-container .hamburger-lines .line1 {
+                                transform-origin: 0% 0%;
+                                transition: transform 0.4s ease-in-out;
+                            }
+                            .menu2-container .hamburger-lines .line2 {
+                                transition: transform 0.2s ease-in-out;
+                            }
+                            .menu2-container .hamburger-lines .line3 {
+                                transform-origin: 0% 100%;
+                                transition: transform 0.4s ease-in-out;
+                            }
+                    .menu2 .menu-items {
+                        padding-bottom: 27vh;
+                        background: #fff;
+                        height: 100vh;
+                        width: 76vh;
+                        max-width: 300px;
+                        transform: translate(-195%);
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 10%;
+                        padding-left: 30%;
+                        transition: transform 0.5s ease-in-out;
+                        box-shadow: 5px 0px 10px 0px #aaa;
+                    }
+                        .menu2 .menu-items li {
+                            margin-bottom: 1.5rem;
+                            font-size: 1.3rem;
+                            font-weight: 500;
+                        }
+                .menu2-container input[type="checkbox"]:checked ~ .menu-items {
+                    transform: translateX(0);
+                }
+                    .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+                        transform: rotate(35deg);
+                    }
+                    .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+                        transform: scaleY(0);
+                    }
+                    .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+                        transform: rotate(-35deg);
+                    }
 }
 
 @media screen and (max-width: 540px) {
@@ -1153,17 +1192,41 @@ footer div.footer2 {
     #cloudIT .cont_p_cont {
         grid-template-columns: 33% 40% 33%;
     }
+    .menu2 .menu-items {
+        margin-left: 20%;
+    }
+    
 }
 
 @media screen and (max-width: 430px) {
     .cont_p_cont article div img {
         height: 18px;
     }
+
+    .menu2 .menu-items {
+        margin-left: 40%;
+    }
 }
 
 @media screen and (max-width: 360px) {
     header div.logo img {
-        margin-left: 5%;
-        width: 90%;
+        margin-top: 2%;
+        width: 270px;
+    }
+
+    .menu2 .menu-items {
+        margin-left: 55%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    header div.logo img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    header div.logo img {
+        font-size: 80%;
     }
 }
