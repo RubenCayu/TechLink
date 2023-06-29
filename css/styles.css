@@ -1037,7 +1037,7 @@ footer div.footer2 {
                 }
                     .menu2-container .hamburger-lines {
                         display: block;
-                        height: 23px;
+                        height: 24px;
                         width: 30px;
                         position: absolute;
                         top: 2.5vh;
@@ -1089,13 +1089,13 @@ footer div.footer2 {
                     transform: translateX(0);
                 }
                     .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-                        transform: rotate(40deg);
+                        transform: rotate(45deg);
                     }
                     .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
                         transform: scaleY(0);
                     }
                     .menu2-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-                        transform: rotate(-40deg);
+                        transform: rotate(-46deg);
                     }
 }
 
