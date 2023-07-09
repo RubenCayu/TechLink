@@ -481,9 +481,60 @@ main.mp {
 
 
 /* Soluciones ------------------------------- */
-/* main.ms {
+main.ms {
+    background-color: #eff0f5;
+    background-color: #F5F8FC;
+}
+    main.ms div.fondo_s {
+        background-color: #F5F8FC;
+        background-image: url(../img/sol-lines-dots-removebg.png);
+        background-position: 100% 0px;
+        background-repeat: no-repeat;
+        background-size: 40% auto;
+    }
+        section.cab_s {
+            padding-bottom: 8%;
+        }
+            main.ms section.cab_p div p {
+                margin-top: 5%;
+                font-size: 120%;
+            }
+    main.ms section.erp {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1370px;
+    }
+        section.erp div.cont_p_titulo {
+            max-width: 1370px;
+            box-shadow: 0px 0px 45px 0px rgba(24, 100, 215, 0.2);
+        }
+            section.erp div.cont_p_titulo div.t1_s#t1 {
+                width: 10%;
+                height: 65px;
+            }
+                div.t1_s#t1 span {
+                    color: #FDFEFF;
+                    font-family: "DM Sans", Sans-serif;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 42px;
+                    letter-spacing: 0.4px;
+                }
+            section.erp div.cont_p_titulo div.t2_s#t2 {
+                width: 90%;
+                justify-content: left;
+                padding-left: 2%;
+            }
+        section.erp div.cont_p_titulo div.cont_p_desc-s {
 
-} */
+        }
+            div.cont_p_desc-s h2{
+
+            }
+            div.cont_p_desc-s p {
+                
+            }
+
 
 
 /* Clientes ------------------------------- */
