@@ -133,7 +133,7 @@ header {
                     display: none;
                     margin: 0%;
                     position: relative;
-                    top: 13px;
+                    top: 26px;
                     border: 1px solid;
                     border-radius: 5px;
                 }
@@ -481,12 +481,12 @@ main.mp {
 
 
 /* Soluciones ------------------------------- */
+
 main.ms {
     background-color: #eff0f5;
-    background-color: #F5F8FC;
+    /* background-color: #F5F8FC; */
 }
     main.ms div.fondo_s {
-        background-color: #F5F8FC;
         background-image: url(../img/sol-lines-dots-removebg.png);
         background-position: 100% 0px;
         background-repeat: no-repeat;
@@ -525,15 +525,20 @@ main.ms {
                 justify-content: left;
                 padding-left: 2%;
             }
-        section.erp div.cont_p_titulo div.cont_p_desc-s {
-
+        section.erp div.cont_p_desc-s {
+            width: 53%;
         }
-            div.cont_p_desc-s h2{
-
+            div.cont_p_desc-s div {
+                padding-top: 5%;
+                padding-left: 3%;
             }
-            div.cont_p_desc-s p {
-                
-            }
+                div.cont_p_desc-s div h2{
+                    font-size: 24px;
+                }
+                div.cont_p_desc-s div p {
+                    margin-top: 3%;
+                    font-size: 18px;
+                }
 
 
 
@@ -803,9 +808,7 @@ footer div.footer2 {
             }
 
 
-/* Correcciones a resoluciones en las que algo empieza a fallar --------------------------------------- */
-
-/* Resoluciones 768px y 992px */
+/* Correcciones a ciertas resoluciones  ----------------------------------------------------- */
 @media screen and (max-width: 1400px) {
     main.mc section.cab_p div {
         width: auto;
@@ -836,7 +839,7 @@ footer div.footer2 {
             margin-top: 0px;
         }
             .menu nav a.opc hr {
-                top: 13px;
+                top: 28px;
             }
                 .desplegable-cont {
                     padding-top: 13px;
@@ -961,6 +964,12 @@ footer div.footer2 {
 @media screen and (max-width: 1700px) {
     footer div.footer1 {
         max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 908px) {
+    .menu nav a.opc hr {
+        top: 23px;
     }
 }
 
